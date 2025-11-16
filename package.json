@@ -1,0 +1,14 @@
+{
+  "name": "math-quiz-websocket-server",
+  "version": "1.0.0",
+  "description": "Dedicated Socket.IO server for math quiz application.",
+  "main": "socket_server.js",
+  "scripts": {
+    "start": "node socket_server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.8.1",
+    "dotenv": "^16.4.5" 
+  }
+}
