@@ -9,12 +9,13 @@ const app = express();
 const server = http.createServer(app); 
 
 // Socket.IO 서버 설정 (클라이언트 연결 주소 허용)
-const io = new Server(server, { 
-    cors: {
-        origin: "*", // 클라이언트 앱 주소 및 API 서버 주소 허용
-        methods: ["GET", "POST"]
-    }
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "https://211-olive.vercel.app", 
+    methods: ["GET", "POST"]
+  }
 });
+
 
 const SOCKET_PORT = process.env.SOCKET_PORT || 4000;
 
