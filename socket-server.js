@@ -11,7 +11,7 @@ const server = http.createServer(app);
 // Socket.IO 서버 설정 (클라이언트 연결 주소 허용)
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://211-olive.vercel.app", 
+    origin: ["https://211-olive.vercel.app","http://localhost:5500"],
     methods: ["GET", "POST"]
   }
 });
